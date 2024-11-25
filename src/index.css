@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-color {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text inline-block;
+}
+
+body {
+  background-color: black;
+}
+
+.bg-primary-color {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 inline-block;
+}
