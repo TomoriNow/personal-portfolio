@@ -31,11 +31,11 @@ const Hero = () => {
             </h1>
             
             <p className='text-white sm:text-lg my-6 lg:text-xl'>
-                My name is Sean Galant, and I have experience in web development and Machine Learning.
+                My name is Sean Galant, a passionate computing student with experience in Web Development and Machine Learning.
             </p>
             
             <div className='my-8'>
-                <a href='https://drive.google.com/file/d/1M4iHCUvKKCqG1qTeI56eAV7Rp-IHVZWe/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
+                <a href='https://drive.google.com/file/d/1x2POw7aru5vf3ST63mEBGbe13jD-gqdG/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
                     Download Resume
                 </a>
                 <a href='#contact' className='font-bold px-6 py-3 w-full rounded-xl mr-4 border border-gray-400 hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:border-none'>
