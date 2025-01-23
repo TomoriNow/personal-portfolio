@@ -35,7 +35,7 @@ const Hero = () => {
             </p>
             
             <div className='my-8'>
-                <a href='https://drive.google.com/file/d/1x2POw7aru5vf3ST63mEBGbe13jD-gqdG/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
+                <a href='https://drive.google.com/file/d/1okCjfoKxH6nr7D3JMHtB8w27cQeHeUhL/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
                     Download Resume
                 </a>
                 <a href='#contact' className='font-bold px-6 py-3 w-full rounded-xl mr-4 border border-gray-400 hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:border-none'>
