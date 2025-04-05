@@ -1,7 +1,9 @@
 import React from 'react'
+import Reveal from '../utils/Reveal'
 
 const Contact = () => {
   return (
+    <Reveal className="h-full">
     <div className='max-w-[1200px] mx-auto bg-black sm:py-20 p-5' id='contact'>
       <div className='text-center'>
          <h2 className='text-4xl font-bold leading-tight primary-color'>Contact Me</h2>
@@ -41,6 +43,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </Reveal>
   )
 }
 

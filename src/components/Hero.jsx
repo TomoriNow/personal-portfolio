@@ -1,13 +1,16 @@
 import React from 'react'
 import heroimage from '../assets/sean-profile-image.jpg'
 import { TypeAnimation } from 'react-type-animation'
+import Reveal from '../utils/Reveal'
 
 const Hero = () => {
   return (
     
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-[1200px] md:h-[70vh] mx-auto py-8 bg-black'>
         <div className='col-span-1 my-auto mx-auto w-[300px] h-auto lg:w-[400px]'>
+            <Reveal className="h-full">
             <img className='rounded-full' src={heroimage} alt="hero image"/>
+            </Reveal>
         </div>
         
         <div className='col-span-2 px-5 my-auto'>
@@ -30,10 +33,13 @@ const Hero = () => {
                 />
             </h1>
             
+            <Reveal className="h-full">
             <p className='text-white sm:text-lg my-6 lg:text-xl'>
                 My name is Sean Galant, a passionate computing student with experience in Web Development and Machine Learning.
             </p>
+            </Reveal>
             
+            <Reveal className="h-full">
             <div className='my-8'>
                 <a href='https://drive.google.com/file/d/13LQaqljD4rjMHjT5o_AADb5DtTOEBt5T/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
                     Download Resume
@@ -42,6 +48,7 @@ const Hero = () => {
                     Contact
                 </a>
             </div>
+            </Reveal>
         </div>
       
     </div>

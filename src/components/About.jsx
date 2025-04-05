@@ -1,8 +1,10 @@
 import React from 'react'
 import aboutImg from '../assets/sean-about.jpg'
+import Reveal from '../utils/Reveal'
 
 const About = () => {
   return (
+    <Reveal className="h-full">
     <div className='text-white max-w-[1200px] mx-auto my-12' id='about'>
         <div className='md:grid md:grid-cols-2 sm:py-16'>
             <div className='mt-4 md:mt-0 text-left flex'>
@@ -17,6 +19,7 @@ const About = () => {
             <img className='mx-auto rounded-3xl py-8 md:py-0' src={aboutImg} width={300} height={300}/>
         </div>
     </div>
+    </Reveal>
   )
 }
 

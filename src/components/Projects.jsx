@@ -1,8 +1,10 @@
 import React from 'react'
 import powerplate from '../assets/power-platee.png'
+import Reveal from '../utils/Reveal'
 
 const Projects = () => {
   return (
+    <Reveal className="h-full">
     <div className='max-w-[1200px] mx-auto p-5' id='projects'>
       <div className='pb-8'>
         <p className='text-4xl mb-3 font-bold primary-color'>Projects</p>
@@ -25,6 +27,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
+    </Reveal>
   )
 }
 
