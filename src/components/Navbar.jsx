@@ -11,7 +11,7 @@ const Navbar = () => {
     
     return (
 
-        <div className='border border-gray-600 bg-black h-[100px] text-gray-400 max-w-[1200px] mx-auto flex justify-between items-center'>
+        <div className='rounded-lg w-full border border-gray-600 bg-black h-[100px] text-gray-400 mx-auto flex justify-between items-center'>
             <h1 className='text-3xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text ml-4'>Sean Galant</h1>
             <ul className='hidden md:flex'>
                 <li className='p-5'><a href='#about'>About</a></li>

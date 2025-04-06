@@ -19,7 +19,7 @@ const Skills = () => {
   return (
     
     <Reveal className="h-full">
-    <div className='border border-gray-600 bg-black text-gray-400 md:h-[150px] max-w-[1200px] mx-auto grid grid-cols-6
+    <div className='rounded-lg border border-gray-600 bg-black text-gray-400 md:h-[150px] max-w-[1200px] mx-auto grid grid-cols-6
                     place-items-center md:flex md:justify-between md:items-center'>
     
         <h2 className='text-white text-xl md:text-4xl font-bold m-4'>
