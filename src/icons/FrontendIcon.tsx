@@ -1,6 +1,7 @@
+import React from "react";
 import { SVGProps } from "react";
 
-export function FrontendIcon(props: SVGProps<SVGSVGElement>) {
+const FrontendIcon = (props: SVGProps<SVGSVGElement>) =>{
   return (
     <svg
       {...props}
@@ -55,3 +56,5 @@ export function FrontendIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export default FrontendIcon;
