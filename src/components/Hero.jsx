@@ -14,7 +14,7 @@ const Hero = () => {
         </div>
         
         <div className='col-span-2 px-5 my-auto'>
-            <h1 className='text-white text-4xl sm:text-5xl lg:text-8xl font-extrabold'>
+            <h1 className='px-4 text-white text-4xl sm:text-5xl lg:text-8xl font-extrabold'>
                 <span className='primary-color'>
                 I'm a
                 </span><br/>
@@ -34,14 +34,14 @@ const Hero = () => {
             </h1>
             
             <Reveal className="h-full">
-            <p className='text-white sm:text-lg my-6 lg:text-xl'>
-                My name is Sean Galant, a passionate computing student with experience in Web Development and Machine Learning.
+            <p className='px-4 text-white sm:text-lg my-6 lg:text-xl'>
+                My name is Sean Galant, a computing student with experience in Machine Learning and Web Development.
             </p>
             </Reveal>
             
             <Reveal className="h-full">
             <div className='my-8'>
-                <a href='https://drive.google.com/file/d/13LQaqljD4rjMHjT5o_AADb5DtTOEBt5T/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
+                <a href='https://drive.google.com/file/d/1lXSgk_IXARc1DQibijMnDol5QOnXaGPI/view?usp=sharing' className='font-bold px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
                     Download Resume
                 </a>
                 <a href='#contact' className='font-bold px-6 py-3 w-full rounded-xl mr-4 border border-gray-400 hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:border-none'>
