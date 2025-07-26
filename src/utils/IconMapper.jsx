@@ -12,10 +12,12 @@ import SpringbootIcon from "../icons/SpringbootIcon.svg";
 import DjangoIcon from "../icons/DjangoIcon.svg";
 import { ScikitLearnLogo } from "../icons/ScikitLearnLogo";
 import { LogosSeabornIcon } from "../icons/SeabornIcon";
-import NumpyIcon from "../icons/NumpyIcon.svg";
-import PandasIcon from "../icons/PandasIcon.svg";
+import NumpyIcon from "../icons/NumpyIcon.tsx";
+import PandasIcon from "../icons/PandasIcon.tsx";
 import ReactIcon from "../icons/ReactIcon";
 import { WhatsappIcon } from "../icons/WhatsappIcon";
+import PytorchIcon from "../icons/PytorchIcon.tsx";
+import OpenCvIcon from "../icons/OpenCv.tsx";
 
 const iconMap = {
   nextJS: RiNextjsFill,
@@ -25,6 +27,7 @@ const iconMap = {
   vite: ViteIcon,
   directus: DirectusIcon,
   python: PythonIcon,
+  pytorch: PytorchIcon,
   postgresql: PostgresqlIcon,
   golang: GoIcon,
   java: JavaIcon,
@@ -36,6 +39,7 @@ const iconMap = {
   pandas: PandasIcon,
   react: ReactIcon,
   whatsapp: WhatsappIcon,
+  opencv: OpenCvIcon,
 };
 
 export const mapIcon = (iconName, className) => {

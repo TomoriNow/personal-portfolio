@@ -19,20 +19,21 @@ import { mapIcon } from "../utils/IconMapper";
 const Projects = ({ className }) => {
   const projects = [
     {
-      name: "Sean's Portfolio",
+      name: "Self-Supervised Image Segmentation with Pre-trained VGG19 and U-Net architecture",
       description:
-        "Website to showcase my projects and skills. Built with ReactJS, Vite + Vue and Tailwind CSS.",
-      img: "sean-portfolio.png",
-      githubLink: "TomoriNow/personal-portfolio",
-      projectLink: "https://sean-galant.vercel.app",
-      projectType: "Full-stack",
+        "This mini-project tackles the challenge of segmenting a single image of the John Curtin School of Medical Research at ANU into meaningful regions using a self-supervised learning approach with a Convolutional Neural Network.",
+      img: "CV_Miniproject_results.png",
+      githubLink: "TomoriNow/computervision_miniproject",
+      projectType: "Machine Learning",
       tools: [
-        { name: "tailwind"},
-        { name: "react"},
-        { name: "vue"},
-        { name: "vite"},
+        { name: "python"},
+        { name: "scikitlearn"},
+        { name: "numpy"},
+        { name: "pytorch"},
+        { name: "seaborn"},
+        { name: "opencv"},
       ],
-      isProjectDisabled: false,
+      isProjectDisabled: true,
       isGithubDisabled: false,
     },
     {
@@ -42,7 +43,7 @@ const Projects = ({ className }) => {
       img: "power-platee.png",
       githubLink: "TomoriNow/power-plate",
       projectLink: "https://power-plate.vercel.app/",
-      projectType: "Full-stack",
+      projectType: "Full-stack, Artificial Intelligence",
       tools: [
         { name: "tailwind"},
         { name: "react"},
@@ -64,6 +65,23 @@ const Projects = ({ className }) => {
         { name: "nextJS"},
         { name: "tailwind"},
         { name: "typescript"},
+      ],
+      isProjectDisabled: false,
+      isGithubDisabled: false,
+    },
+    {
+      name: "Sean's Portfolio",
+      description:
+        "Website to showcase my projects and skills. Built with ReactJS, Vite + Vue and Tailwind CSS.",
+      img: "sean-portfolio.png",
+      githubLink: "TomoriNow/personal-portfolio",
+      projectLink: "https://sean-galant.vercel.app",
+      projectType: "Full-stack",
+      tools: [
+        { name: "tailwind"},
+        { name: "react"},
+        { name: "vue"},
+        { name: "vite"},
       ],
       isProjectDisabled: false,
       isGithubDisabled: false,
