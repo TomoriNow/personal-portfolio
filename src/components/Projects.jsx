@@ -86,6 +86,23 @@ const Projects = ({ className }) => {
       isProjectDisabled: false,
       isGithubDisabled: false,
     },
+    {
+      name: "TIME Space",
+      description:
+        "A Tech Launcher ANU Project Coming Soon!",
+      img: "",
+      githubLink: "Terrencezzz/time-lab-ml.github.io",
+      projectLink: "-",
+      projectType: "Full-stack",
+      tools: [
+        { name: "nextJS"},
+        { name: "tailwind"},
+        { name: "typescript"},
+        { name: "python"},
+      ],
+      isProjectDisabled: true,
+      isGithubDisabled: true,
+    },
   ];
 
   const fallbackSrc = "/images/fallback.webp";
