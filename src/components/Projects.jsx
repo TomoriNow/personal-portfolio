@@ -50,7 +50,7 @@ const Projects = ({ className }) => {
         { name: "vue"},
         { name: "vite"},
       ],
-      isProjectDisabled: false,
+      isProjectDisabled: true,
       isGithubDisabled: false,
     },
     {
