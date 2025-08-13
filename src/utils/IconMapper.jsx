@@ -18,6 +18,7 @@ import ReactIcon from "../icons/ReactIcon";
 import { WhatsappIcon } from "../icons/WhatsappIcon";
 import PytorchIcon from "../icons/PytorchIcon.tsx";
 import OpenCvIcon from "../icons/OpenCv.tsx";
+import TensorflowIcon from "../icons/TensorflowIcon.tsx";
 
 const iconMap = {
   nextJS: RiNextjsFill,
@@ -40,6 +41,7 @@ const iconMap = {
   react: ReactIcon,
   whatsapp: WhatsappIcon,
   opencv: OpenCvIcon,
+  tensorflow: TensorflowIcon,
 };
 
 export const mapIcon = (iconName, className) => {

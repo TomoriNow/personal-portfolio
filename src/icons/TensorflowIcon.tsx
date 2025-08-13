@@ -1,0 +1,24 @@
+import * as React from "react"
+import { SVGProps } from "react"
+
+const TensorflowIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="100"
+      height="100"
+      viewBox="0 0 48 48"
+    >
+    <path fill="#ffa000" d="m16 39.609 7 4V4l-7 4z" />
+    <path fill="#ffa000" d="M23 12.433 6 22.25v-8.5l17-9.817z" />
+    <path fill="#ffb300" d="m32 39.609-7 4V4l7 4z" />
+    <path
+      fill="#ffb300"
+      d="m25 12.433 17 9.817v-8.5L25 3.933zM29 19.732v7.633l7 4.042v-7.632z"
+    />
+  </svg>
+)
+
+export default TensorflowIcon

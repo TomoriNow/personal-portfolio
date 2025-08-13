@@ -37,6 +37,24 @@ const Projects = ({ className }) => {
       isGithubDisabled: false,
     },
     {
+      name: "Microsoft Stock Price Prediction using LSTM",
+      description:
+        "A deep learning project that uses Long Short-Term Memory (LSTM) neural networks to predict Microsoft stock prices based on historical data.",
+      img: "timeseries_project.png",
+      githubLink: "TomoriNow/timeseries_stock_prediction_project_msft",
+      projectType: "Machine Learning",
+      tools: [
+        { name: "python"},
+        { name: "scikitlearn"},
+        { name: "numpy"},
+        { name: "tensorflow"},
+        { name: "seaborn"},
+        { name: "pandas"},
+      ],
+      isProjectDisabled: true,
+      isGithubDisabled: false,
+    },
+    {
       name: "PowerPlate",
       description:
         "PowerPlate leverages advanced AI to democratize preventative healthcare, focusing on combating off-track demotivation - the tendency to abandon health goals after minor setbacks.",
