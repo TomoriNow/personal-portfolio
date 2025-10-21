@@ -107,19 +107,24 @@ const Projects = ({ className }) => {
     {
       name: "TIME Space",
       description:
-        "A Tech Launcher ANU Project Coming Soon!",
-      img: "",
-      githubLink: "Terrencezzz/time-lab-ml.github.io",
-      projectLink: "-",
-      projectType: "Full-stack",
+        "Time Space is an interactive, web-based platform designed with a space-inspired theme. It serves as both a digital showcase and an engagement hub for the TIME Space group of the TIME Lab research cluster at Griffith University.",
+      img: "tech-launcher.png",
+      githubLink: "Terrencezzz/time-lab-ml.github.io/tree/main/MachineLearningSolution",
+      projectLink: "https://timespace-3d.vercel.app/",
+      projectType: "Machine Learning",
       tools: [
         { name: "nextJS"},
         { name: "tailwind"},
         { name: "typescript"},
         { name: "python"},
+        { name: "scikitlearn"},
+        { name: "numpy"},
+        { name: "tensorflow"},
+        { name: "seaborn"},
+        { name: "pandas"},
       ],
-      isProjectDisabled: true,
-      isGithubDisabled: true,
+      isProjectDisabled: false,
+      isGithubDisabled: false,
     },
   ];
 
