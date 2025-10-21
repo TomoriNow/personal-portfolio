@@ -61,7 +61,7 @@ const Projects = ({ className }) => {
       img: "power-platee.png",
       githubLink: "TomoriNow/power-plate",
       projectLink: "https://power-plate.vercel.app/",
-      projectType: "Full-stack, Artificial Intelligence",
+      projectType: "Full-stack",
       tools: [
         { name: "tailwind"},
         { name: "react"},
