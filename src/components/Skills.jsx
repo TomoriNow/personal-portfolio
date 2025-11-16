@@ -9,7 +9,7 @@ import java from "../assets/Java_programming_language_logo.svg.png";
 import sql from "../assets/Postgresql_elephant.svg.png";
 import flutter from "../assets/flutter.png";
 import go from "../assets/Go_Logo_Blue.svg.png";
-import django from "../assets/django_logo.png";
+import django from "../assets/django-logo-negative.png";
 import spring from "../assets/Spring_Boot.svg.png";
 import Reveal from "../utils/Reveal";
 
