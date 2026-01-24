@@ -1,49 +1,83 @@
 import React from 'react'
 import Reveal from '../utils/Reveal'
+import { FiMail, FiUser, FiMessageSquare, FiSend } from 'react-icons/fi'
 
 const Contact = () => {
   return (
-    <Reveal className="h-full">
-    <div className='max-w-[1200px] mx-auto bg-black sm:py-20 p-5' id='contact'>
-      <div className='text-center'>
-         <h2 className='text-4xl font-bold leading-tight primary-color'>Contact Me</h2>
-      </div>
+    <section className='relative py-16 sm:py-24' id='contact'>
+      {/* Background decoration */}
+      <div className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500/5 rounded-full blur-3xl' />
       
-      <div className='max-w-[800px] mx-auto'>
-        <div className='mt-6 bg-[#161616] rounded-xl'>
-            <div className='p-10'>
-                <form action="https://getform.io/f/awnnvygb" method="POST">
-                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4'>
-                        <div>
-                            <div className='mt-2.5'>
-                                <input type="text" name="name" id="" placeholder='Your Name' className='bg-[#161616] w-full px-4 py-4 text-gray-400
-                                                                                                    border border-gray-700 rounded-md focus:outline-none focus:border-cyan-500'/>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='mt-2.5'>
-                                <input type="email" name="email" id="" placeholder='Your Email' className='bg-[#161616] w-full px-4 py-4 text-gray-400
-                                                                                                    border border-gray-700 rounded-md focus:outline-none focus:border-cyan-500'/>
-                            </div>
-                        </div>
-                        <div className='sm:col-span-2'>
-                            <div className='mt-2.5'>
-                                <textarea name="message" id="" placeholder='Your Message' className='bg-[#161616] w-full px-4 py-4 text-gray-400 placeholder-gray-400
-                                                                                                    border border-gray-700 rounded-md focus:outline-none focus:border-cyan-500' rows='4'/>
-                            </div>
-                        </div>
-                        <div className='sm:col-span-2'>
-                            <button type='submit' className='text-xl w-full p-4 mt-2 font-semibold text-white bg-primary-color rounded-md'>
-                                Send 
-                            </button>                        
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+      <div className='relative z-10 max-w-[800px] mx-auto px-4 sm:px-6'>
+        <Reveal>
+          <div className='text-center mb-12 px-4 sm:px-0'>
+            <h2 className='section-heading inline-block'>Get in Touch</h2>
+            <p className='section-subheading mx-auto'>
+              Have a project in mind? Let's work together to build something amazing.
+            </p>
+          </div>
+        </Reveal>
+        
+        <Reveal>
+          <div className='glass-card p-8 md:p-10'>
+            <form action="https://getform.io/f/awnnvygb" method="POST" className='space-y-6'>
+              <div className='grid md:grid-cols-2 gap-6'>
+                {/* Name Field */}
+                <div className='relative group'>
+                  <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+                    <FiUser className='text-dark-500 group-focus-within:text-primary-400 transition-colors' />
+                  </div>
+                  <input 
+                    type="text" 
+                    name="name" 
+                    placeholder='Your Name' 
+                    required
+                    className='w-full pl-12 pr-4 py-4 bg-dark-900/50 border border-white/10 rounded-xl text-white placeholder-dark-500 focus:outline-none focus:border-primary-500/50 focus:bg-dark-900 focus:shadow-glow-sm transition-all duration-300'
+                  />
+                </div>
+                
+                {/* Email Field */}
+                <div className='relative group'>
+                  <div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+                    <FiMail className='text-dark-500 group-focus-within:text-primary-400 transition-colors' />
+                  </div>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    placeholder='Your Email' 
+                    required
+                    className='w-full pl-12 pr-4 py-4 bg-dark-900/50 border border-white/10 rounded-xl text-white placeholder-dark-500 focus:outline-none focus:border-primary-500/50 focus:bg-dark-900 focus:shadow-glow-sm transition-all duration-300'
+                  />
+                </div>
+              </div>
+              
+              {/* Message Field */}
+              <div className='relative group'>
+                <div className='absolute top-4 left-0 pl-4 pointer-events-none'>
+                  <FiMessageSquare className='text-dark-500 group-focus-within:text-primary-400 transition-colors' />
+                </div>
+                <textarea 
+                  name="message" 
+                  placeholder='Your Message' 
+                  required
+                  rows='5'
+                  className='w-full pl-12 pr-4 py-4 bg-dark-900/50 border border-white/10 rounded-xl text-white placeholder-dark-500 focus:outline-none focus:border-primary-500/50 focus:bg-dark-900 focus:shadow-glow-sm transition-all duration-300 resize-none'
+                />
+              </div>
+              
+              {/* Submit Button */}
+              <button 
+                type='submit' 
+                className='w-full btn-primary flex items-center justify-center gap-3 py-4'
+              >
+                <span className='relative z-10 font-semibold'>Send Message</span>
+                <FiSend className='relative z-10' />
+              </button>
+            </form>
+          </div>
+        </Reveal>
       </div>
-    </div>
-    </Reveal>
+    </section>
   )
 }
 

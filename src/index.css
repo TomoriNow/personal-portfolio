@@ -2,14 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
-.primary-color {
-  @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text inline-block;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply bg-dark-950 text-white antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(ellipse at top, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-primary-500/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-primary-500 to-accent-500 rounded-full;
+  }
 }
 
-body {
-  background-color: black;
+@layer components {
+  .primary-color {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-accent-500 text-transparent bg-clip-text;
+  }
+
+  .bg-primary-color {
+    @apply bg-gradient-to-r from-primary-500 to-accent-500;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-dark {
+    @apply bg-dark-900/60 backdrop-blur-xl border border-white/5;
+  }
+
+  .glass-card {
+    @apply bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .gradient-border {
+    @apply relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl p-[1px] bg-gradient-to-r from-primary-500/50 to-accent-500/50;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-400 via-cyan-300 to-accent-400 text-transparent bg-clip-text;
+  }
+
+  .text-gradient-animated {
+    @apply bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400 text-transparent bg-clip-text;
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+  }
+
+  .btn-primary {
+    @apply relative px-6 py-3 sm:px-8 sm:py-4 font-semibold text-white rounded-xl overflow-hidden transition-all duration-300;
+    @apply bg-gradient-to-r from-primary-500 to-accent-500;
+    @apply hover:shadow-glow hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-primary:hover::before {
+    @apply opacity-100;
+  }
+
+  .btn-outline {
+    @apply relative px-6 py-3 sm:px-8 sm:py-4 font-semibold text-white rounded-xl overflow-hidden transition-all duration-300;
+    @apply border border-white/20 hover:border-primary-500/50;
+    @apply hover:bg-white/5 hover:shadow-glow-sm active:scale-[0.98];
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-4;
+  }
+
+  .section-subheading {
+    @apply text-lg text-dark-400 max-w-2xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-glow;
+  }
+
+  .glow-line {
+    @apply h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent;
+  }
 }
 
-.bg-primary-color {
-  @apply bg-gradient-to-r from-cyan-500 to-blue-500 inline-block;
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
 }

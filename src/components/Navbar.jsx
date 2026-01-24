@@ -1,44 +1,114 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const handleNav = () => {
         setNav(!nav)
     }
     
     return (
-
-        <div className='rounded-lg w-full border border-gray-600 bg-black h-[100px] text-gray-400 mx-auto flex justify-between items-center'>
-            <h1 className='text-3xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text ml-4'>Sean Galant</h1>
-            <ul className='hidden md:flex'>
-                <li className='p-5'><a href='#about'>About</a></li>
-                <li className='p-5'><a href='#projects'>Projects</a></li>
-                <li className='p-5'><a href='#contact'>Contact</a></li>
-            </ul>
-            
-            <div onClick={handleNav} className='block md:hidden mr-6'>
-                {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
-            </div>
-            
-            <div className={nav ? 'z-20 fixed h-full left-0 top-0 w-[60%] bg-[#202121] ease-in-out duration-500' 
-                    : 'z-20 fixed h-full top-0 left-[-100%] w-[60%] ease-in-out duration-500'}>
-                <div className='mx-auto flex justify-between'>
-                    <h1 className=' m-4 text-3xl bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text'> Sean Galant</h1>
-                    <div onClick={handleNav} className='block md:hidden mr-6 mt-7'>
-                        <AiOutlineClose size={20}/>
-                    </div>
-                </div>
-                <ul className='p-8 text-2xl'>
-                    <li className='p-2'><a href='#about'>About</a></li>
-                    <li className='p-2'><a href='#projects'>Projects</a></li>
-                    <li className='p-2'><a href='#contact'>Contact</a></li>    
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+            scrolled 
+                ? 'py-3 glass-dark shadow-lg shadow-black/20' 
+                : 'py-5 bg-transparent'
+        }`}>
+            <div className='max-w-[1400px] mx-auto px-6 flex justify-between items-center'>
+                <a href="#" className='text-2xl md:text-3xl font-bold text-gradient hover:opacity-80 transition-opacity'>
+                    Sean Galant
+                </a>
+                
+                <ul className='hidden md:flex items-center gap-1'>
+                    {['About', 'Projects', 'Contact'].map((item) => (
+                        <li key={item}>
+                            <a 
+                                href={`#${item.toLowerCase()}`}
+                                className='relative px-5 py-2.5 text-dark-300 hover:text-white transition-colors duration-300 group'
+                            >
+                                {item}
+                                <span className='absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 group-hover:w-3/4 rounded-full' />
+                            </a>
+                        </li>
+                    ))}
+                    <li className='ml-4'>
+                        <a 
+                            href='https://drive.google.com/file/d/1OZD8jzbPiehYskRBd0KMOmcQgMD_D10y/view?usp=sharing'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium hover:shadow-glow transition-all duration-300 hover:scale-105'
+                        >
+                            Resume
+                        </a>
+                    </li>
                 </ul>
                 
+                <button 
+                    onClick={handleNav} 
+                    className='md:hidden p-2 rounded-lg glass hover:bg-white/10 transition-colors'
+                    aria-label="Toggle menu"
+                >
+                    {nav ? <AiOutlineClose size={24}/> : <AiOutlineMenu size={24}/>}
+                </button>
             </div>
-        </div>
+            
+            {/* Mobile Menu Overlay */}
+            <div 
+                className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+                    nav ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+                onClick={handleNav}
+            />
+            
+            {/* Mobile Menu */}
+            <div className={`fixed top-0 left-0 h-full w-[280px] glass-dark transition-transform duration-500 ease-out md:hidden ${
+                nav ? 'translate-x-0' : '-translate-x-full'
+            }`}>
+                <div className='p-6 flex justify-between items-center border-b border-white/10'>
+                    <span className='text-xl font-bold text-gradient'>Sean Galant</span>
+                    <button 
+                        onClick={handleNav}
+                        className='p-2 rounded-lg hover:bg-white/10 transition-colors'
+                    >
+                        <AiOutlineClose size={20}/>
+                    </button>
+                </div>
+                <ul className='p-6 space-y-2'>
+                    {['About', 'Projects', 'Contact'].map((item, index) => (
+                        <li key={item}>
+                            <a 
+                                href={`#${item.toLowerCase()}`}
+                                onClick={handleNav}
+                                className='block px-4 py-3 text-lg text-dark-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300'
+                                style={{ animationDelay: `${index * 100}ms` }}
+                            >
+                                {item}
+                            </a>
+                        </li>
+                    ))}
+                    <li className='pt-4'>
+                        <a 
+                            href='https://drive.google.com/file/d/1OZD8jzbPiehYskRBd0KMOmcQgMD_D10y/view?usp=sharing'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium'
+                        >
+                            Download Resume
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     )
 }
 

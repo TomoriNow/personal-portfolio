@@ -1,18 +1,5 @@
 import React from "react";
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Chip,
-  Link,
-  Tooltip,
-} from "@heroui/react";
-import { Image as NextImage } from "@heroui/react";
-import { FiGithub } from "react-icons/fi";
-import { MdArrowForwardIos } from "react-icons/md";
-
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Reveal from "../utils/Reveal";
 import { mapIcon } from "../utils/IconMapper";
 
@@ -130,98 +117,105 @@ const Projects = ({ className }) => {
   const fallbackSrc = "/images/fallback.webp";
 
   return (
-    <section id="projects" className="px-4 md:px-8 lg:px-16 py-12 bg-black">
-      <div className={`flex flex-col items-center md:items-start w-full ${className || ""}`}>
-        <Reveal className="text-start w-full">
-          <div className="flex items-center">
-            <h2 className='text-4xl font-bold mb-4 primary-color'>Projects</h2>
-            <div className="relative ml-8 w-full rounded-full md:w-auto md:flex-grow h-0.5 bg-white opacity-20" />
+    <section id="projects" className="relative py-16 sm:py-24">
+      {/* Background decoration */}
+      <div className="absolute left-0 top-1/3 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-3xl" />
+      
+      <div className={`relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 ${className || ""}`}>
+        <Reveal>
+          <div className="flex flex-col items-center md:flex-row md:items-center gap-4 mb-12 sm:mb-16 text-center md:text-left">
+            <h2 className="section-heading whitespace-nowrap">Projects</h2>
+            <div className="glow-line flex-grow hidden md:block" />
           </div>
         </Reveal>
-        <div className="flex flex-col mt-8 gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 w-full items-stretch">
+        
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal key={index} className="flex justify-center items-stretch">
-              <div className="w-full h-full">
-                <Card
-                  radius="sm"
-                  className="rounded-xl shadow-xl w-full h-full hover:bg-neutral-900 border border-neutral-700/60 hover:border-neutral-700/70 bg-neutral-950 hover:-translate-y-2 transition-all duration-300"
-                >
-                  <CardHeader className="flex flex-col items-start p-0">
-                    <div className="w-full aspect-video relative">
-                      <NextImage
-                        removeWrapper
-                        className="absolute object-cover w-full h-full rounded-t-xl"
-                        src={
-                          project.img
-                            ? `/images/projects/${project.img}`
-                            : fallbackSrc
-                        }
-                        fallbackSrc={fallbackSrc}
-                        alt={project.name}
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardBody className="flex flex-col items-start p-5 pb-0 h-auto">
-                    <div className="flex flex-row gap-2 h-[25px]">
-                      {project.tools.map((tool, idx) => (
-                        <Tooltip key={idx}>
-                          <div className="h-[25px] w-[25px] text-white">
-                            {mapIcon(tool.name, "w-full h-full")}
-                          </div>
-                        </Tooltip>
-                      ))}
-                    </div>
-                    <div className="flex w-full mt-5 items-center">
-                      <p className="text-white text-xl font-medium leading-7">
-                        {project.name}
-                      </p>
-                    </div>
-                    <span className="primary-color font-bold text-sm border border-primary p-1 px-2 rounded-full mt-3">
-                      {project.projectType}
-                    </span>
-                    <p className="mt-3 text-neutral-400 line-clamp-4">
-                      {project.description}
-                    </p>
-                  </CardBody>
-                  <CardFooter className="justify-start items-center gap-3 p-5">
-                  <div className="flex gap-3">
+            <Reveal key={index}>
+              <article className="glass-card overflow-hidden group card-hover h-full flex flex-col">
+                {/* Image */}
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src={project.img ? `/images/projects/${project.img}` : fallbackSrc}
+                    alt={project.name}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent opacity-60" />
+                  
+                  {/* Project type badge */}
+                  <span className="absolute top-4 left-4 px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-primary-500/80 to-accent-500/80 backdrop-blur-sm text-white">
+                    {project.projectType}
+                  </span>
+                </div>
+                
+                {/* Content */}
+                <div className="flex flex-col flex-grow p-6">
+                  {/* Tech icons */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tools.map((tool, idx) => (
+                      <div 
+                        key={idx} 
+                        className="w-6 h-6 text-dark-400 hover:text-primary-400 transition-colors"
+                        title={tool.name}
+                      >
+                        {mapIcon(tool.name, "w-full h-full")}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-white mb-3 line-clamp-2 group-hover:text-primary-400 transition-colors">
+                    {project.name}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-dark-400 text-sm leading-relaxed line-clamp-3 flex-grow">
+                    {project.description}
+                  </p>
+                  
+                  {/* Actions */}
+                  <div className="flex gap-3 mt-6 pt-4 border-t border-white/5">
                     <a 
                       href={project.projectLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className={`flex items-center justify-center w-10 h-10 rounded-sm border border-neutral-700 bg-transparent group transition-all duration-300 hover:bg-primary hover:border-primary ${project.isProjectDisabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : 'cursor-pointer'}`}
-                      aria-label="See project"
-                      title="See project"
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        project.isProjectDisabled 
+                          ? 'opacity-40 cursor-not-allowed bg-dark-800 text-dark-500' 
+                          : 'bg-gradient-to-r from-primary-500 to-accent-500 text-white hover:shadow-glow-sm hover:scale-105'
+                      }`}
+                      onClick={e => project.isProjectDisabled && e.preventDefault()}
                     >
-                      <MdArrowForwardIos
-                        className="text-neutral-400 group-hover:text-white transition-colors duration-300"
-                        size={18}
-                      />
+                      <FiExternalLink size={16} />
+                      View
                     </a>
                     <a 
                       href={`https://github.com/${project.githubLink}`} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className={`flex items-center justify-center w-10 h-10 rounded-sm border border-neutral-700 bg-transparent group transition-all duration-300 hover:bg-primary hover:border-primary ${project.isGithubDisabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : 'cursor-pointer'}`}
-                      aria-label="Project repository"
-                      title="Project repository"
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-all duration-300 ${
+                        project.isGithubDisabled 
+                          ? 'opacity-40 cursor-not-allowed border-dark-700 text-dark-500' 
+                          : 'border-white/10 text-white hover:border-primary-500/50 hover:bg-white/5'
+                      }`}
+                      onClick={e => project.isGithubDisabled && e.preventDefault()}
                     >
-                      <FiGithub 
-                        className="text-neutral-400 group-hover:text-white transition-colors duration-300" 
-                        size={22} 
-                      />
+                      <FiGithub size={16} />
+                      Code
                     </a>
                   </div>
-                  </CardFooter>
-                </Card>
-              </div>
+                </div>
+              </article>
             </Reveal>
           ))}
         </div>
       </div>
-      <div className="mt-12 relative w-full rounded-full md:w-auto md:flex-grow h-0.5 bg-white opacity-20" />
+      
+      <div className="max-w-[1400px] mx-auto px-6 mt-16">
+        <div className="glow-line" />
+      </div>
     </section>
-    
   );
 };
 

@@ -31,47 +31,54 @@ const techStack = [
 const Skills = () => {
   return (
     <section
-      className="py-10 bg-gradient-to-b from-black via-gray-900 to-black"
+      className="relative py-16 sm:py-24 overflow-hidden"
       id="skills"
     >
-      <div className="max-w-6xl mx-auto px-4">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-500/5 to-transparent" />
+      
+      <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6">
         <Reveal>
-          <div className="text-center mb-10">
-            <h2 className="text-4xl font-extrabold text-white mb-2">
-              My Tech Stack
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="section-heading">
+              Tech Stack
             </h2>
-            <p className="text-gray-400 text-lg">
-              Tools & technologies I use to build great things
+            <p className="section-subheading mx-auto px-4 sm:px-0">
+              Tools & technologies I use to bring ideas to life
             </p>
           </div>
         </Reveal>
 
         <Reveal>
-          {/* CSS-Based Slider */}
-          <div className="relative overflow-hidden pt-5 mb-10 p-5 rounded-lg bg-gray-800 border border-gray-700">
+          {/* Modern Card Container */}
+          <div className="glass-card p-4 sm:p-8 shadow-glow-sm">
+            {/* CSS-Based Slider */}
             <div
               className="slider"
               style={{
-                "--height": "130px",
-                "--width": "130px",
+                "--height": "120px",
+                "--width": "100px",
                 "--quantity": techStack.length * 2,
               }}
             >
               <div className="list">
                 {techStack.concat(techStack).map((tech, index) => (
                   <div
-                    className="item flex flex-col items-center"
+                    className="item flex flex-col items-center group cursor-pointer"
                     key={index}
                     style={{
                       "--position": index + 1,
                     }}
                   >
-                    <img
-                      src={tech.src}
-                      alt={tech.alt}
-                      className="h-[100px] object-contain transition-transform duration-300 w-[50px] md:w-[100px] p-2"
-                    />
-                    <span className="text-gray-300 mt-2 text-sm text-center">
+                    <div className="relative p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-dark-800/50 border border-white/5 group-hover:border-primary-500/30 group-hover:bg-dark-800 transition-all duration-300">
+                      <img
+                        src={tech.src}
+                        alt={tech.alt}
+                        className="h-[45px] w-[45px] sm:h-[60px] sm:w-[60px] md:h-[70px] md:w-[70px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-dark-400 mt-2 sm:mt-3 text-xs sm:text-sm font-medium group-hover:text-primary-400 transition-colors duration-300 text-center max-w-[80px] sm:max-w-none truncate">
                       {tech.alt}
                     </span>
                   </div>
@@ -105,9 +112,8 @@ const Skills = () => {
           height: var(--height);
           position: absolute;
           left: 100%;
-          animation: autoRun 20s linear infinite;
-          transition: filter 0.5s;
-          animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1) - 20s) !important;
+          animation: autoRun 25s linear infinite;
+          animation-delay: calc((25s / var(--quantity)) * (var(--position) - 1) - 25s) !important;
         }
         .slider .list .item img {
           width: 100%;
@@ -122,21 +128,6 @@ const Skills = () => {
         }
         .slider:hover .item {
           animation-play-state: paused !important;
-          filter: grayscale(1);
-        }
-        .slider .item:hover {
-          filter: grayscale(0);
-        }
-        .slider[reverse="true"] .item {
-          animation: reversePlay 10s linear infinite;
-        }
-        @keyframes reversePlay {
-          from {
-            left: calc(var(--width) * -1);
-          }
-          to {
-            left: 100%;
-          }
         }
       `}</style>
     </section>
