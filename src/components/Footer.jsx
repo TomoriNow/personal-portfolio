@@ -50,9 +50,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/5 text-center">
           <p className="text-dark-500 text-sm flex flex-wrap items-center justify-center gap-1">
-            © {currentYear} Sean Galant. Made with 
-            <FiHeart className="w-4 h-4 text-primary-500" /> 
-            using React & Tailwind
+            © {currentYear} Sean Galant.
           </p>
         </div>
       </div>
