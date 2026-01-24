@@ -10,6 +10,8 @@ const Navbar = () => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50)
         }
+        // Check initial scroll position
+        handleScroll()
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
@@ -17,13 +19,17 @@ const Navbar = () => {
     const handleNav = () => {
         setNav(!nav)
     }
+
+    const handleNavClick = () => {
+        setNav(false)
+        // Force scrolled state after clicking a nav link since we'll be scrolling down
+        setTimeout(() => {
+            setScrolled(window.scrollY > 50)
+        }, 100)
+    }
     
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-            scrolled 
-                ? 'py-3 glass-dark shadow-lg shadow-black/20' 
-                : 'py-5 bg-transparent'
-        }`}>
+        <nav className='fixed top-0 left-0 right-0 z-50 py-3 border-b border-white/5 shadow-lg shadow-black/20' style={{ backgroundColor: '#020617' }}>
             <div className='max-w-[1400px] mx-auto px-6 flex justify-between items-center'>
                 <a href="#" className='text-2xl md:text-3xl font-bold text-gradient hover:opacity-80 transition-opacity'>
                     Sean Galant
@@ -88,7 +94,7 @@ const Navbar = () => {
                         <li key={item}>
                             <a 
                                 href={`#${item.toLowerCase()}`}
-                                onClick={handleNav}
+                                onClick={handleNavClick}
                                 className='block px-4 py-3 text-lg text-dark-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300'
                                 style={{ animationDelay: `${index * 100}ms` }}
                             >
