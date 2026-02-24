@@ -84,7 +84,7 @@ const Hero = () => {
           <Reveal>
             <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
               <a 
-                href='https://drive.google.com/file/d/1r7mM5ETjLFkLbsLSvJomOYjNNh7gxnFA/view?usp=sharing'
+                href='https://drive.google.com/file/d/1vYMW7AgmY7QWmJPuda2bdmpEN79TznxT/view?usp=sharing'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='btn-primary text-center'
