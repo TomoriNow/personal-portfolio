@@ -49,7 +49,7 @@ const Navbar = () => {
                     ))}
                     <li className='ml-4'>
                         <a 
-                            href='https://drive.google.com/file/d/1OZD8jzbPiehYskRBd0KMOmcQgMD_D10y/view?usp=sharing'
+                            href='https://drive.google.com/file/d/1ja9mt6fYZodH-FJQMq20rHhjqtz-7zjR/view?usp=sharing'
                             target="_blank"
                             rel="noopener noreferrer"
                             className='px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium hover:shadow-glow transition-all duration-300 hover:scale-105'

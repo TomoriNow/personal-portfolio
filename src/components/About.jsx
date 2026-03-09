@@ -4,10 +4,12 @@ import Reveal from '../utils/Reveal'
 
 const About = () => {
   const highlights = [
+    { label: 'Software Engineer Freelance (AI)', org: 'SIRCLO' },
     { label: 'Software Engineer Intern (AI)', org: 'SIRCLO' },
     { label: 'Co-Founder/VP', org: 'ANU Data Science Community' },
     { label: 'Academic Tutor', org: 'ANU Machine Learning' },
     { label: 'Teaching Assistant', org: 'UI Advanced Programming' },
+    { label: 'Teaching Assistant', org: 'UI Programming Foundations' },
   ]
 
   return (
@@ -41,7 +43,7 @@ const About = () => {
             
             <Reveal>
               <p className='text-dark-300 text-lg leading-relaxed mb-8'>
-                I am a fourth-year student at the <span className='text-primary-400'>Australian National University (ANU)</span> with a passion for Computer Science. I strive for continuous improvement in developing projects related to machine learning, while refining my organizational and leadership capabilities as a results-oriented individual.
+                I am a fourth-year student at the <span className='text-primary-400'>Australian National University (ANU)</span> with a passion for Computer Science. I strive for continuous improvement in developing projects related to software engineering and machine learning, while refining my organizational and leadership capabilities as a results-oriented individual.
               </p>
             </Reveal>
             

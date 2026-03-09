@@ -77,14 +77,14 @@ const Hero = () => {
             <p className='text-dark-400 text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed'>
               A computing student passionate about building innovative solutions in 
               <span className='text-primary-400'> Machine Learning</span> and 
-              <span className='text-accent-400'> Web Development</span>.
+              <span className='text-accent-400'> Software Engineering</span>.
             </p>
           </Reveal>
           
           <Reveal>
             <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
               <a 
-                href='https://drive.google.com/file/d/1vYMW7AgmY7QWmJPuda2bdmpEN79TznxT/view?usp=sharing'
+                href='https://drive.google.com/file/d/1ja9mt6fYZodH-FJQMq20rHhjqtz-7zjR/view?usp=sharing'
                 target="_blank"
                 rel="noopener noreferrer"
                 className='btn-primary text-center'
