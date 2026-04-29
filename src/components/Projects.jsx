@@ -1,5 +1,6 @@
 import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { motion } from "motion/react";
 import Reveal from "../utils/Reveal";
 import { mapIcon } from "../utils/IconMapper";
 
@@ -117,22 +118,32 @@ const Projects = ({ className }) => {
   const fallbackSrc = "/images/fallback.webp";
 
   return (
-    <section id="projects" className="relative py-16 sm:py-24">
+    <section id="projects" className="relative py-20 sm:py-32">
       {/* Background decoration */}
       <div className="absolute left-0 top-1/3 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-3xl" />
       
       <div className={`relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 ${className || ""}`}>
         <Reveal>
-          <div className="flex flex-col items-center md:flex-row md:items-center gap-4 mb-12 sm:mb-16 text-center md:text-left">
-            <h2 className="section-heading whitespace-nowrap">Projects</h2>
-            <div className="glow-line flex-grow hidden md:block" />
+          <div className="text-center mb-16">
+            <span className="text-primary-400 text-sm font-medium tracking-[0.2em] uppercase mb-2 block">Featured Work</span>
+            <h2 className="section-heading">Projects</h2>
+            <p className="section-subheading mx-auto">
+              A selection of projects spanning full-stack development and machine learning
+            </p>
           </div>
         </Reveal>
         
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal key={index}>
-              <article className="glass-card overflow-hidden group card-hover h-full flex flex-col">
+            <motion.article
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -6 }}
+              className="relative bg-dark-900/60 backdrop-blur-xl border border-white/[0.08] rounded-2xl overflow-hidden group h-full flex flex-col hover:border-primary-500/20 transition-colors duration-500 hover:shadow-glow"
+            >
                 {/* Image */}
                 <div className="relative aspect-video overflow-hidden">
                   <img
@@ -206,8 +217,7 @@ const Projects = ({ className }) => {
                     </a>
                   </div>
                 </div>
-              </article>
-            </Reveal>
+              </motion.article>
           ))}
         </div>
       </div>

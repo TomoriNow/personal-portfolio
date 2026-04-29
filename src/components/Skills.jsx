@@ -74,7 +74,7 @@ const Skills = () => {
                       <img
                         src={tech.src}
                         alt={tech.alt}
-                        className="h-[45px] w-[45px] sm:h-[60px] sm:w-[60px] md:h-[70px] md:w-[70px] object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="h-[45px] w-[45px] sm:h-[55px] sm:w-[55px] md:h-[55px] md:w-[55px] object-contain transition-transform duration-300 group-hover:scale-110"
                         loading="lazy"
                       />
                     </div>
@@ -116,7 +116,9 @@ const Skills = () => {
           animation-delay: calc((25s / var(--quantity)) * (var(--position) - 1) - 25s) !important;
         }
         .slider .list .item img {
-          width: 100%;
+          width: 55px;
+          height: 55px;
+          object-fit: contain;
         }
         @keyframes autoRun {
           from {
