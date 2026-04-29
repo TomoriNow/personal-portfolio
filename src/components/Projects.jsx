@@ -64,7 +64,7 @@ const Projects = ({ className }) => {
         "A platform that seeks to connect Indonesian talents within the ANU community to industry and beyond, while fostering employability and idea exchange.",
       img: "anuisa.png",
       githubLink: "fiardiel/anuisa_proj",
-      projectLink: "https://anuisa.org/",
+      projectLink: "https://www.anuisa.org/",
       projectType: "Full-stack",
       tools: [
         { name: "nextJS"},

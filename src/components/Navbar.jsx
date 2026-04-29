@@ -104,7 +104,7 @@ const Navbar = () => {
                     ))}
                     <li className='pt-4'>
                         <a 
-                            href='https://drive.google.com/file/d/1OZD8jzbPiehYskRBd0KMOmcQgMD_D10y/view?usp=sharing'
+                            href='https://drive.google.com/file/d/1ja9mt6fYZodH-FJQMq20rHhjqtz-7zjR/view?usp=sharing'
                             target="_blank"
                             rel="noopener noreferrer"
                             className='block text-center px-4 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 text-white font-medium'
