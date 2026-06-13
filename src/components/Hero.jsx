@@ -136,7 +136,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <a 
-              href='https://drive.google.com/file/d/1ja9mt6fYZodH-FJQMq20rHhjqtz-7zjR/view?usp=sharing'
+              href='https://drive.google.com/file/d/1adsvCB5bGDGS9FUjnNyQVUh4XZqS4F-W/view?usp=sharing'
               target="_blank"
               rel="noopener noreferrer"
               className='btn-primary text-center'
