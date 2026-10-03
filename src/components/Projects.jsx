@@ -7,6 +7,24 @@ import { mapIcon } from "../utils/IconMapper";
 const Projects = ({ className }) => {
   const projects = [
     {
+      name: "SIRCLO Insights",
+      description:
+        "An AI-powered analytics platform for Indonesian e-commerce brands. Migrated a legacy analytics hub to React/Vite and Golang on PostgreSQL and BigQuery, and engineered SIRCLO AI Chat, an LLM conversational assistant with tool calling for intuitive data exploration.",
+      img: "sirclo-insights.png",
+      githubLink: "",
+      projectLink: "https://sirclo.com/press/data-e-commerce-kian-kompleks-sirclo-luncurkan-dashboard-analitik-berbasis-ai-2",
+      projectType: "AI / Full-stack",
+      tools: [
+        { name: "react"},
+        { name: "vite"},
+        { name: "golang"},
+        { name: "postgresql"},
+        { name: "bigquery"},
+      ],
+      isProjectDisabled: false,
+      isGithubDisabled: true,
+    },
+    {
       name: "Self-Supervised Image Segmentation with Pre-trained VGG19 and U-Net architecture",
       description:
         "This mini-project tackles the challenge of segmenting a single image of the John Curtin School of Medical Research at ANU into meaningful regions using a self-supervised learning approach with a Convolutional Neural Network.",

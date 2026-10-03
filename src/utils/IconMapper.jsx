@@ -6,7 +6,7 @@ import { VueIcon } from "../icons/VueIcon";
 import { ViteIcon } from "../icons/ViteIcon";
 import DirectusIcon from "../icons/DirectusIcon";
 import PostgresqlIcon from "../icons/PostgresqlIcon";
-import GoIcon from "../icons/GoIcon.svg";
+import { SiGo, SiGooglebigquery } from "react-icons/si";
 import JavaIcon from "../icons/JavaIcon";
 import SpringbootIcon from "../icons/SpringbootIcon.svg";
 import DjangoIcon from "../icons/DjangoIcon.svg";
@@ -30,7 +30,8 @@ const iconMap = {
   python: PythonIcon,
   pytorch: PytorchIcon,
   postgresql: PostgresqlIcon,
-  golang: GoIcon,
+  golang: SiGo,
+  bigquery: SiGooglebigquery,
   java: JavaIcon,
   springboot: SpringbootIcon,
   django: DjangoIcon,

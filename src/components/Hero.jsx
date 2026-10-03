@@ -103,11 +103,9 @@ const Hero = () => {
             <span className='text-white'>
               <TypeAnimation
                 sequence={[
-                  "CS Student",
+                  "AI Engineer",
                   2000,
                   "Fullstack Dev",
-                  2000,
-                  "ML Enthusiast",
                   2000,
                 ]}
                 wrapper='span'
@@ -124,9 +122,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            A computing student passionate about building innovative solutions in 
-            <span className='text-primary-400'> Machine Learning</span> and 
-            <span className='text-accent-400'> Software Engineering</span>.
+            Head of AI & Innovation at HIVE Property, building
+            <span className='text-primary-400'> AI agents</span> and
+            <span className='text-accent-400'> data platforms</span> that turn information into actionable intelligence.
           </motion.p>
           
           <motion.div
