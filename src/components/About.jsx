@@ -45,7 +45,7 @@ const About = () => {
             
             <Reveal>
               <p className='text-dark-300 text-lg leading-relaxed mb-8'>
-                I am the <span className='text-primary-400 font-medium'>Head of AI & Innovation at HIVE Property</span> in Canberra, where I build AI agents and data platforms that turn complexity into competitive advantage. Previously at <span className='text-primary-400 font-medium'>SIRCLO</span>, I engineered the AI-powered SIRCLO Insights analytics platform. As a Computer Science graduate of both the <span className='text-primary-400 font-medium'>Australian National University (ANU)</span> and <span className='text-primary-400 font-medium'>Universitas Indonesia (UI)</span>, earned simultaneously, my focus is simple: solve complex problems, remove friction and build technology that performs.
+                I am the <span className='text-primary-400 font-medium'>Head of AI & Innovation at HIVE Property</span> in Canberra, where I build AI agents and data platforms that turn complexity into competitive advantage. Previously at <span className='text-primary-400 font-medium'>SIRCLO</span>, I engineered the AI-powered SIRCLO Insights analytics platform. As a Computer Science graduate of both the <span className='text-primary-400 font-medium'>Australian National University (ANU)</span> and <span className='text-primary-400 font-medium'>Universitas Indonesia (UI)</span>, my focus is simple: solve complex problems, remove friction and build technology that performs.
               </p>
             </Reveal>
             
