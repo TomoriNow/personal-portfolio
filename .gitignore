@@ -22,3 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Impeccable design tooling (local only)
+.impeccable/
+PRODUCT.md
+DESIGN.md
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+id_ed25519*
+*.keystore
+credentials*.json
+service-account*.json
+.npmrc
+
+# Deploy and tool state (may hold tokens or project IDs)
+.vercel
+.netlify
+.claude/settings.local.json

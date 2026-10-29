@@ -12,7 +12,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          'motion': ['motion', 'framer-motion'],
+          'motion': ['motion'],
         },
       },
     },
